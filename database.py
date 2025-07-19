@@ -719,9 +719,9 @@ class Database:
             return False
     async def get_user_role(self, user_id):
 
-    role = await self.d1.fetch_one(
-        "SELECT role FROM Users WHERE user_id=?", (user_id,)
-    )
-    return role[0] if role else None
+        role = await self.d1.fetch_one(
+            "SELECT role FROM Users WHERE user_id=?", (user_id,)
+        )
+        return role[0] if role else None
 # إنشاء نسخة واحدة من قاعدة البيانات لتستخدمها التطبيق
 db = Database()

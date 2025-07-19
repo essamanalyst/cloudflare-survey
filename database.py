@@ -718,7 +718,7 @@ class Database:
             st.error(f"حدث خطأ في التحقق من إكمال الاستبيان: {str(e)}")
             return False
     async def get_user_role(self, user_id):
-    """الحصول على دور المستخدم"""
+
     role = await self.d1.fetch_one(
         "SELECT role FROM Users WHERE user_id=?", (user_id,)
     )

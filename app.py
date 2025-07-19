@@ -9,7 +9,7 @@ async def main():
     st.set_page_config(page_title="نظام إدارة الاستبيانات", page_icon="📋", layout="wide")
     
     from auth import authenticate, logout
-    from database import db, get_user_role
+    from database import db
     from admin_views import show_admin_dashboard
     from employee_views import show_employee_dashboard
     from governorate_admin_views import show_governorate_admin_dashboard
@@ -20,7 +20,7 @@ async def main():
     # التحقق من حالة الجلسة
     if await authenticate():
         st.session_state.last_activity = datetime.now()
-        user_role = await get_user_role(st.session_state.user_id)
+        user_role = await db.get_user_role(st.session_state.user_id)
         
         st.sidebar.button("تسجيل الخروج", on_click=logout)
         

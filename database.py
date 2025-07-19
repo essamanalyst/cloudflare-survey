@@ -4,7 +4,7 @@ from typing import Optional, List, Tuple, Dict
 from datetime import datetime
 from pathlib import Path
 import os
-from cloudflare import CloudflareD1  # سيتم استيراد هذا من ملف cloudflare.py
+from cloudflare import CloudflareD1
 
 class Database:
     def __init__(self):

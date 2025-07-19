@@ -9,10 +9,10 @@ from cloudflare import CloudflareD1
 class Database:
     def __init__(self):
         self.d1 = CloudflareD1(
-            account_id=os.getenv('Egygaming2030@gmail.com'),
-            api_token=os.getenv('Ej-g0BbGpZnTdtaF-Oev2Gj_LSjhFEDKurB5rmse'),
-            database_id=os.getenv('survey')
-        )
+    account_id=os.getenv('CF_ACCOUNT_ID'),
+    api_token=os.getenv('CF_API_TOKEN'),
+    database_id=os.getenv('CF_D1_DATABASE_ID')
+)
     
     async def init_db(self):
         """تهيئة الجداول في قاعدة البيانات"""

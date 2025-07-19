@@ -4,12 +4,12 @@ from typing import List, Tuple, Dict, Any, Optional
 
 class CloudflareD1:
     def __init__(self, account_id: str, api_token: str, database_id: str):
-        self.account_id = account_id
-        self.api_token = api_token
-        self.database_id = database_id
-        self.base_url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/d1/database/{database_id}"
+        self.account_id = Egygaming2030@gmail.com
+        self.api_token = Ej-g0BbGpZnTdtaF-Oev2Gj_LSjhFEDKurB5rmse
+        self.database_id = survey
+        self.base_url = f"https://dash.cloudflare.com/42b6366b10a18fd49cb438e1e3dc472e/workers/d1/databases/7284aca1-f39d-45d0-9628-f965decfc202}"
         self.headers = {
-            "Authorization": f"Bearer {api_token}",
+            "Authorization": f"Bearer {Ej-g0BbGpZnTdtaF-Oev2Gj_LSjhFEDKurB5rmse}",
             "Content-Type": "application/json"
         }
     

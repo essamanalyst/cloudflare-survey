@@ -4,14 +4,13 @@ from datetime import datetime, timedelta
 from database import db
 
 async def authenticate():
-    # التحقق من وجود بيانات الجلسة وانتهاء المدة
     if 'authenticated' in st.session_state and st.session_state.authenticated:
         if 'last_activity' in st.session_state:
             if (datetime.now() - st.session_state.last_activity) < timedelta(hours=1):
-                st.session_state.last_activity = datetime.now()  # تجديد النشاط
+                st.session_state.last_activity = datetime.now()
                 return True
             else:
-                logout()  # انتهت مدة الجلسة
+                logout()
         else:
             st.session_state.last_activity = datetime.now()
             return True

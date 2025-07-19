@@ -9,7 +9,7 @@ class CloudflareD1:
         self.database_id = os.getenv('survey')
         self.base_url = f"https://dash.cloudflare.com/42b6366b10a18fd49cb438e1e3dc472e/workers/d1/databases/7284aca1-f39d-45d0-9628-f965decfc202"
         self.headers = {
-            "Authorization": f"Bearer {Ej-g0BbGpZnTdtaF-Oev2Gj_LSjhFEDKurB5rmse}",
+            "Authorization": f"Bearer {self.api_token}",
             "Content-Type": "application/json"
         }
     

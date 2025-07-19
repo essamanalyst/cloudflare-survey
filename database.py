@@ -139,10 +139,8 @@ class Database:
         for table in tables:
             await self.d1.execute(table)
         
-        # إضافة مستخدم admin افتراضي إذا لم يكن موجوداً
-        admin_count = await self.d1.fetch_one(
-            "SELECT COUNT(*) FROM Users WHERE role='admin'"
-        )
+        # إضافة مستخدم admin افتراضي
+        admin_count = await self.d1.fetch_one("SELECT COUNT(*) FROM Users WHERE role='admin'")
         if admin_count[0] == 0:
             from auth import hash_password
             admin_password = hash_password("admin123")

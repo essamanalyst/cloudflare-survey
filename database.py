@@ -217,7 +217,7 @@ class Database:
                 """INSERT INTO Response_Details 
                    (response_id, field_id, answer_value) 
                    VALUES (?, ?, ?)""",
-                (response_id, field_id, str(answer_value) if answer_value is not None else "")
+                (response_id, field_id, str(answer_value) if answer_value is not None else ""))
             return True
         except Exception as e:
             st.error(f"حدث خطأ في حفظ تفاصيل الإجابة: {str(e)}")

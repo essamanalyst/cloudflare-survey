@@ -4,10 +4,10 @@ from typing import List, Tuple, Dict, Any, Optional
 
 class CloudflareD1:
     def __init__(self, account_id: str, api_token: str, database_id: str):
-        self.account_id = os.getenv('Egygaming2030@gmail.com')
-        self.api_token = os.getenv('Ej-g0BbGpZnTdtaF-Oev2Gj_LSjhFEDKurB5rmse')
-        self.database_id = os.getenv('survey')
-        self.base_url = f"https://dash.cloudflare.com/42b6366b10a18fd49cb438e1e3dc472e/workers/d1/databases/7284aca1-f39d-45d0-9628-f965decfc202"
+        self.account_id = os.getenv('83acf29d328030b2ba791428cfc1ba85')
+        self.api_token = os.getenv('FVG-LQVo2VjDab_35NmVe6LS1EBJ_MCFIX9j5FLv')
+        self.database_id = os.getenv('mego_db')
+        self.base_url = f"https://dash.cloudflare.com/83acf29d328030b2ba791428cfc1ba85/workers/d1/databases/5af9bc2f-5d02-42eb-91cc-f56d3e74566d"
         self.headers = {
             "Authorization": f"Bearer {self.api_token}",
             "Content-Type": "application/json"
